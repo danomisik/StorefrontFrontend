@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Product } from "../models/product";
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+@Injectable({
+  providedIn: 'root'
 })
-export class ProductListComponent implements OnInit {
-  productList: Product[] = [];
+export class ProductService {
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.productList = [
+  getProductById(id: String) {
+
+  }
+
+  getProducts() {
+    return [
       {
         id: 1,
         name: "Book",

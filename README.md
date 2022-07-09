@@ -25,3 +25,18 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## TODO
+
+1. The Project README includes a description of the project, as well as instructions for installation and launch
+2. fix styles base on: https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
+3. finish card detail option
+  - The details page for a product shows a photo of the product, the name, the price, and the description
+  - for more check: https://learn.udacity.com/nanodegrees/nd0067/parts/cd0294/lessons/bfa4c2d6-f6db-46d5-a163-5210ca31ef1b/concepts/d093f1ea-7190-49e9-b58d-ed80efcb5a9b
+4. connect frontend to backend ( db-migrate for basic products, add variables to product, pull in Product service from Backend.)
+  - The list of products is retrieved from an external API or by using the HttpClient service to read the provided data.json file.
+5. add "Products can be removed from the cart" feature
+
+
+
+

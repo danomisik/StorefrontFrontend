@@ -1,0 +1,24 @@
+<form #form="ngForm" fxLayout="column" fxLayoutGap="10px" class="purchase-container" (ngSubmit)="onSubmit()">
+    <label>Full name</label>
+    <input 
+       type="text"
+       name="fullname" 
+       class="text-input" 
+       required 
+       minlength="3" 
+       placeholder="(minimum 3 characters)"
+       [(ngModel)]="fullName">
+       <!-- #name="ngModel"> -->
+    <label>Address</label>
+    <input name="address" placeholder="(minimum 6 characters)" required minlength="6" class="text-input" [(ngModel)]="address">
+
+    <label>Credit card number</label>
+    <input name="creditCard" placeholder="(minimum 16 numbers)" required minlength="16" class="text-input" [(ngModel)]="creditCard">
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid" >Submit</button>
+</form>
+
+<!-- <div *ngIf="name.invalid && name.dirty">
+    <div *ngIf="name.errors?.['minlength']">
+      The Your full name must contain at least 3 characters.
+    </div>
+</div> -->
