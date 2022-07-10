@@ -12,7 +12,7 @@ export class ProductItemComponent implements OnInit {
 
   quantity: string = '1';
 
-  constructor(private orderService: CartService) { 
+  constructor(private cartService: CartService) { 
     this.product = {
       id: 1,
       name: '',
@@ -26,7 +26,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   addProductToOrder(){
-    this.orderService.addProductToCart(this.product, this.quantity);
+    this.cartService.addProductToCart(this.product, this.quantity);
     alert("Added!")
   }
 

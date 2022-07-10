@@ -28,4 +28,9 @@ export class CartComponent implements OnInit {
     this.cartService.updateCart(this.cart);
   }
 
+  onRemove(productId: number) {
+    this.cart.products = this.cart.products.filter(({ product }) => product.id !== productId);
+    this.updatePrice();
+  }
+
 }

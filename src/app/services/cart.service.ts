@@ -15,10 +15,13 @@ export class CartService {
   constructor() { }
 
 
+
+  //TODO: Connect service with Backend
   getCart() {
     return this.cart;
   }
 
+  //TODO: Connect service with Backend
   addProductToCart(product: Product, quantity: string) {
     let cartProduct: CartProduct = {
       quantity: quantity,
@@ -29,6 +32,7 @@ export class CartService {
     return this.cart;
   }
 
+  //TODO: Connect service with Backend
   updateCart(cart: Cart) {
     this.cart = cart;
     return this.cart;

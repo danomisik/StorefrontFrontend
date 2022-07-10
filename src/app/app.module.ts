@@ -13,6 +13,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PurchaseComponent } from './components/purchase/purchase.component';
 import { CartContainerComponent } from './components/cart-container/cart-container.component';
+import { HttpClientModule } from '@angular/common/http'; 
 import { FormsModule } from "@angular/forms";
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FormsModule } from "@angular/forms";
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

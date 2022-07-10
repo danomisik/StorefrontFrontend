@@ -22,7 +22,7 @@
                       <mat-option value="10">10</mat-option>
                     </mat-select>
                   </mat-form-field>
-                <button type="submit" class="btn btn-secondary btn-sm">Remove</button>
+                <button type="submit" (click)="onRemove(cartProduct.product.id)" class="btn btn-secondary btn-sm">Remove</button>
             </div>
         </div>
     </li>
