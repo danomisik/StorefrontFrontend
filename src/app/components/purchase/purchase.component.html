@@ -37,8 +37,9 @@
     <label>Credit card number</label>
     <input name="creditCard"
            placeholder="(minimum 16 numbers)"
-           required 
-           minlength="16" 
+           required
+           minlength="16"
+           pattern="[0-9]{16,}"
            class="text-input"
            [(ngModel)]="creditCard"
            #cart="ngModel">
@@ -46,8 +47,8 @@
       <div *ngIf="cart.errors?.['required']">
         Credit card is required.
       </div>
-      <div *ngIf="cart.errors?.['minlength']">
-        Credit card must contain at least 16 characters.
+      <div *ngIf="cart.errors?.['pattern']">
+        Credit card must contain at least 16 number.
       </div>
     </div>
     <button type="submit" class="btn btn-primary" [disabled]="form.invalid" >Submit</button>
