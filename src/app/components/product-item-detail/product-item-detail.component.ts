@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from "../../models/product";
@@ -25,13 +25,12 @@ export class ProductItemDetailComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private cartService: CartService, private productService: ProductService) { }
 
   ngOnInit(): void {
-    //this.product = this.productService.getProductById(this.activatedRoute.snapshot.params['id'])[0]
     this.productService.getProductById(this.activatedRoute.snapshot.params['id']).subscribe( product => {
       this.product = product;
     })
   }
 
-  addProductToOrder(){
+  addProductToCart(){
     this.cartService.addProductToCart(this.product, this.quantity);
     alert("Added!")
   }

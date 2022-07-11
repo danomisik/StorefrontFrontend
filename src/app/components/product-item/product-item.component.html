@@ -18,6 +18,6 @@
           <mat-option value="10">10</mat-option>
         </mat-select>
       </mat-form-field>
-    <p><button (click)="addProductToOrder()" class="btn btn-primary" style="width: 108px;">Add to Cart</button></p>
+    <p><button (click)="added.emit({product: product, quantity: quantity})" class="btn btn-primary" style="width: 108px;">Add to Cart</button></p>
 </div>
 

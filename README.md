@@ -31,6 +31,36 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 3. Visit `http://localhost:4200/` in your browser and buy something.
 
+## Project description
+
+App contains these components (`app/components` folder):
+
+- cart: contains products in cart and final price of cart
+- purchase: contains form for additional purchase
+- cart-container: encapsulates cart and purchase component, user is redirected here by Cart tab(Routing: `/cart`).
+- confirmation: when purchase is success, user is redirected here from purchase component (Routing: `/cart/confirmation`)
+- navigation: navigation bar at top of the app
+- product-item: product item that is part of product list, child of product-list component
+- product-item-detail: product detail page redirected from product-item component (Routing: `/products/:id`)
+- product-list: renders product items, user is redirected here by Products tab(Routing: `/` - default route).
+
+App contains these models (`app/models` folder):
+
+- cart: represent cart in store
+- product: represent product in store
+
+App contains these services (`app/services` folder):
+
+- cart: represent cart service that contain one mock cart of user (Carts for users should be get from Storefront Backend in future).
+- product: represent product service that is pulling products from Storefront Backend.
+
+App have these routings:
+
+- `/`                  - product-list component(default route)
+- `/cart`              - cart-container(parent of cart and purchase component)
+- `/cart/confirmation` - confimation component that contains confirmation page
+- `/products/:id`      - product-item-detail component that contains product details
+
 ## Additional details
 
 This app was build by [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.
